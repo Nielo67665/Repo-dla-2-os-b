@@ -8,7 +8,18 @@ int main()
 
     printf("\n Podaj pierwsze wyrazenie: ");
     scanf("%lf", &a);
-    printf("\n Jakiego rodzaju operacje chcesz wykonac?\n\n      Potegowanie to '^'\n\n      Pierwiastkowanie to '#'\n\n Podaj znak: ");
+
+
+
+    printf("\n Jakiego rodzaju operacje chcesz wykonac?\n\n\
+           Potegowanie to '^'\n\n\
+           Pierwiastkowanie to '#'\n\n\
+           Dodawanie to '+'\n\n\
+           Odejmowanie to '-'\n\n\
+           Mnozenie to '*'\n\n\
+           Dzielenie to '/'\n\n\
+           Podaj znak: ");
+
 
     getchar ();
     scanf("%c",&znak);
