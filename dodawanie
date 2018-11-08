@@ -1,16 +1,14 @@
 #include <stdio.h>
 
-int main ()
+int main()
 {
-  char znak;
-  int liczba1,liczba1;
+    int liczba1,liczba2,wynik;
 
-printf("Podaj pierwsza liczbe: liczba1");
-printf("Podaj druga liczbe: liczba2");
-scanf("%i",liczba1+liczba2);
-printf("Twoja liczba to: ");
-
-getchar ();
-return 0;
-
+    printf("Podaj pierwsze wyrazenie: ");
+    scanf("%i", &liczba1);
+    printf("\nPodaj drugie wyrazenie: ");
+    scanf("%i", &liczba2);
+    wynik=liczba1+liczba2;
+    printf("\nWynik to: %i\n",wynik);
+    return 0;
 }
