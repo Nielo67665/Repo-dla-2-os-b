@@ -21,7 +21,13 @@ switch(znak)
         case '-': x=a-b;
                 printf("\nWynik dzialania to: %d\n",x);
                 break;
+        case '*': x=a*b;
+                printf("\nWynik dzialania to: %d\n",x);
+                break;
+
+
 }
 
     return 0;
 }
+
