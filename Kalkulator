@@ -1,14 +1,13 @@
 #include <stdio.h>
-
 int main()
 {
-    int a,b,x;
+    double a,b,x;
     char znak;
 
     printf("Podaj pierwsze wyrazenie: ");
-    scanf("%i", &a);
+    scanf("%lf", &a);
     printf("\nPodaj drugie wyrazenie: ");
-    scanf("%i", &b);
+    scanf("%lf", &b);
     printf("\nJakiego rodzaju operacje chcesz wykonac? (Podaj znak): ");
     getchar ();
     scanf("%c",&znak);
@@ -16,18 +15,18 @@ int main()
 switch(znak)
 {
         case '+': x=a+b;
-                printf("\nWynik dzialania to: %d\n",x);
+                printf("\nWynik dzialania to: %lf\n",x);
                 break;
         case '-': x=a-b;
-                printf("\nWynik dzialania to: %d\n",x);
+                printf("\nWynik dzialania to: %lf\n",x);
                 break;
         case '*': x=a*b;
-                printf("\nWynik dzialania to: %d\n",x);
+                printf("\nWynik dzialania to: %lf\n",x);
                 break;
-
-
+        case '/': x=a/b;
+                printf("\nWynik dzialania to: %lf\n",x);
+                break;
 }
 
     return 0;
 }
-
