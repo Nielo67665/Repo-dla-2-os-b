@@ -2,13 +2,26 @@
 
 int main()
 {
-    int liczba1,liczba2,wynik;
+    int a,b,x;
+    char znak;
 
     printf("Podaj pierwsze wyrazenie: ");
-    scanf("%i", &liczba1);
+    scanf("%i", &a);
     printf("\nPodaj drugie wyrazenie: ");
-    scanf("%i", &liczba2);
-    wynik=liczba1+liczba2;
-    printf("\nWynik to: %i\n",wynik);
+    scanf("%i", &b);
+    printf("\nJakiego rodzaju operacje chcesz wykonac? (Podaj znak): ");
+    getchar ();
+    scanf("%c",&znak);
+
+switch(znak)
+{
+        case '+': x=a+b;
+                printf("\nWynik dzialania to: %d\n",x);
+                break;
+        case '-': x=a-b;
+                printf("\nWynik dzialania to: %d\n",x);
+                break;
+}
+
     return 0;
 }
