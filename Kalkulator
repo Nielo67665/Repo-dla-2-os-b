@@ -1,32 +1,53 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 int main()
 {
     double a,b,x;
     char znak;
 
-    printf("Podaj pierwsze wyrazenie: ");
+    printf("\n Podaj pierwsze wyrazenie: ");
     scanf("%lf", &a);
-    printf("\nPodaj drugie wyrazenie: ");
-    scanf("%lf", &b);
-    printf("\nJakiego rodzaju operacje chcesz wykonac? (Podaj znak): ");
+    printf("\n Jakiego rodzaju operacje chcesz wykonac?\n\n      Potegowanie to '^'\n\n      Pierwiastkowanie to '#'\n\n Podaj znak: ");
+
     getchar ();
     scanf("%c",&znak);
+    if(znak=='#' || znak=='^')
+    {
+        switch(znak)
+            {
+            case '#':
+                printf("\n\nPierwiastek z (%lf) wynosi %lf\n\n",a,sqrt(a));
+                break;
+            case '^': x=a*a;
+                    printf("\nWynik dzialania to: %lf\n",x);
+                    break;
+            }
+    }
+    else
+    {
+        printf("\nPodaj drugie wyrazenie: ");
+        scanf("%lf", &b);
 
-switch(znak)
-{
-        case '+': x=a+b;
-                printf("\nWynik dzialania to: %lf\n",x);
-                break;
-        case '-': x=a-b;
-                printf("\nWynik dzialania to: %lf\n",x);
-                break;
-        case '*': x=a*b;
-                printf("\nWynik dzialania to: %lf\n",x);
-                break;
-        case '/': x=a/b;
-                printf("\nWynik dzialania to: %lf\n",x);
-                break;
-}
+
+        switch(znak)
+            {
+                    case '+': x=a+b;
+                            printf("\nWynik dzialania to: %lf\n",x);
+                            break;
+                    case '-': x=a-b;
+                            printf("\nWynik dzialania to: %lf\n",x);
+                            break;
+                    case '*': x=a*b;
+                            printf("\nWynik dzialania to: %lf\n",x);
+                            break;
+                    case '/': x=a/b;
+                            printf("\nWynik dzialania to: %lf\n",x);
+                            break;
+            }
+    }
+
+
 
     return 0;
 }
